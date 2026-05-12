@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        #back {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: white;
+            background: rgba(0,0,0,0.5);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            z-index: 99;
+            font-family: 'Jersey 10', sans-serif;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="week4.html" id="back">← back</a>
+
+    <script>
+function setup() {
+createCanvas(windowWidth, windowHeight);
+background(0);
+rectMode(CENTER);
+}
+
+function draw() {
+circle(mouseX, mouseY, 80 - abs(pmouseX - mouseX));
+strokeWeight((50 - abs(pmouseY - mouseY)) / 4);
+
+if (mouseIsPressed) {
+fill("red");
+stroke("red");
+} else {
+fill("white");
+stroke("white");
+}
+
+line(pmouseX, pmouseY, mouseX, mouseY);
+}
+    </script>
+</body>
+</html>

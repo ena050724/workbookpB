@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        #back {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: white;
+            background: rgba(0,0,0,0.5);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            z-index: 99;
+            font-family: 'Jersey 10', sans-serif;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="week5.html" id="back">← back</a>
+
+    <script>
+    function setup() {
+createCanvas(400, 400);
+}
+
+
+function draw() {
+background(255, 182, 193);
+
+//hair
+rect(90, 140, 80, 180);
+rect(230, 140, 80, 180);
+
+//face
+fill(255, 200, 150);
+ellipse(200, 190, 170, 200);
+
+//eye
+fill(50);
+ellipse(165, 180, 20, 20)
+ellipse(235, 180, 20, 20)
+
+//nose
+triangle(200, 195, 190, 215, 210, 215);
+
+//mouth
+arc(200, 230, 60, 30, 0, PI);
+
+//hair
+fill(80, 40, 0);
+arc(200, 140, 220, 150, PI, 0);
+
+}
+    </script>
+</body>
+</html>

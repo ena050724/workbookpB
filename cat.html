@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            overflow: hidden;
+        }
+
+        #cat {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <img id="cat" src="image/cat.gif" alt="bad cat">
+
+    <script>
+        const cat = document.getElementById('cat');
+
+     
+        cat.addEventListener('click', () => {
+            cat.style.transform = 'translate(-50%, -50%) scale(1.2)';
+            setTimeout(() => {
+                cat.style.transform = 'translate(-50%, -50%) scale(1)';
+            }, 200);
+        });
+    </script>
+
+</body>
+</html>

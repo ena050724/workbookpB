@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body.week-page {
+            background-image: url('ocean.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        body.week-page::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 15, 40, 0.55);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        body.week-page .ocean-container {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            height: auto;
+            padding-bottom: 100px;
+        }
+
+        body.week-page .parchment-letter {
+            width: 90%;
+            max-width: 1100px;
+            margin: 60px auto;
+            position: relative;
+            left: unset;
+            top: unset;
+            transform: none;
+            padding: 40px;
+        }
+
+        body.week-page .footer {
+            position: relative;
+            margin-top: 40px;
+            bottom: unset;
+        }
+
+        .reflection-content h1 {
+            color: #064b7f;
+            margin-bottom: 20px;
+        }
+
+        .reflection-content p {
+            color: #064b7f;
+            font-size: 22px;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+
+    </style>
+</head>
+
+<body class="week-page">
+<div class="ocean-container">
+
+    <div class="sunlight-ray">
+        <div class="light-ray ray-1"></div>
+        <div class="light-ray ray-2"></div>
+        <div class="light-ray ray-3"></div>
+        <div class="light-ray ray-4"></div>
+        <div class="light-ray ray-5"></div>
+    </div>
+
+    <div class="bubbles-container">
+        <div class="bubble small" style="left: 5%; animation-delay: 0s;"></div>
+        <div class="bubble small" style="left: 12%; animation-delay: 0.5s;"></div>
+        <div class="bubble small" style="left: 25%; animation-delay: 1.5s;"></div>
+        <div class="bubble small" style="left: 40%; animation-delay: 2.5s;"></div>
+        <div class="bubble small" style="left: 55%; animation-delay: 3.5s;"></div>
+        <div class="bubble small" style="left: 70%; animation-delay: 4.5s;"></div>
+        <div class="bubble small" style="left: 84%; animation-delay: 5.5s;"></div>
+        <div class="bubble medium" style="left: 7%; animation-delay: 0.2s;"></div>
+        <div class="bubble medium" style="left: 22%; animation-delay: 1.4s;"></div>
+        <div class="bubble medium" style="left: 38%; animation-delay: 2.8s;"></div>
+        <div class="bubble medium" style="left: 53%; animation-delay: 4.1s;"></div>
+        <div class="bubble medium" style="left: 68%; animation-delay: 5.5s;"></div>
+        <div class="bubble medium" style="left: 82%; animation-delay: 6.8s;"></div>
+        <div class="bubble large" style="left: 9%; animation-delay: 0.3s;"></div>
+        <div class="bubble large" style="left: 28%; animation-delay: 2.3s;"></div>
+        <div class="bubble large" style="left: 47%; animation-delay: 4.7s;"></div>
+        <div class="bubble large" style="left: 65%; animation-delay: 7.1s;"></div>
+        <div class="bubble large" style="left: 83%; animation-delay: 9.5s;"></div>
+    </div>
+
+    <div class="small-fish-container">
+        <div class="small-fish fish-1"></div>
+        <div class="small-fish fish-2"></div>
+        <div class="small-fish fish-3"></div>
+        <div class="small-fish fish-4"></div>
+        <div class="small-fish fish-5"></div>
+        <div class="small-fish fish-6"></div>
+        <div class="small-fish fish-7"></div>
+        <div class="small-fish fish-8"></div>
+    </div>
+
+    <div class="parchment-letter">
+        <div class="reflection-content">
+        <div class="reflection-block">
+        <div class="reflection-text">
+        <a href="https://rhizome.org/editorial/2013/mar/12/glitch-body-politic/">The Glitch Body Politic</a>
+            <p>After reading this article, I realised that glitches are not always just technical errors. They can also be used creatively to represent identity, emotions, and the instability of digital culture and the human body.
+
+</p>
+        <a href="https://www.datavis.ca/papers/hbook.pdf">History of Data Visualization</a>
+            <p>After reading this text, I realised that data visualisation has existed for a very long time and was not only made for decoration. Graphics and visual systems were created to help people understand complex information more clearly and communicate ideas visually.</p>
+        </div>
+    </div>
+
+
+
+
+    <!-- Buttons -->
+    <div class="week-buttons">
+        <a href="week5.html">
+            <img src="image/backbutton.png" alt="previous" class="nav-btn">
+        </a>
+        <a href="index.html">
+            <img src="image/homebutton.png" alt="home" class="nav-btn">
+        </a>
+        <a href="week6.html">
+            <img src="image/nextbutton.png" alt="next" class="nav-btn">
+        </a>
+    </div>
+
+</div><!-- end ocean-container -->
+
+  <div class="footer">
+            <p>sienna / 2026 / interactive media</p>
+        </div>
+    </div>
+</body>
+</html>

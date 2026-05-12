@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oceania - Design Process</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body.week-page {
+            background-image: url('ocean.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        body.week-page::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 15, 40, 0.55);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        body.week-page .ocean-container {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            height: auto;
+            padding-bottom: 100px;
+        }
+
+        body.week-page .parchment-letter {
+            width: 90%;
+            max-width: 1100px;
+            margin: 60px auto;
+            position: relative;
+            left: unset;
+            top: unset;
+            transform: none;
+            padding: 40px;
+        }
+
+        body.week-page .footer {
+            position: relative;
+            margin-top: 40px;
+            bottom: unset;
+        }
+
+        .reflection-block {
+            position: relative;
+            width: 90%;
+            max-width: 1100px;
+            margin: 20px auto;
+            border-radius: 10px;
+            padding: 40px;
+            z-index: 10;
+        }
+
+        .reflection-text {
+            color: #064b7f;
+            font-size: 21px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body class="week-page">
+<div class="ocean-container">
+
+    <!-- Sunlight Ray -->
+    <div class="sunlight-ray">
+        <div class="light-ray ray-1"></div>
+        <div class="light-ray ray-2"></div>
+        <div class="light-ray ray-3"></div>
+        <div class="light-ray ray-4"></div>
+        <div class="light-ray ray-5"></div>
+    </div>
+
+    <!-- Bubbles -->
+    <div class="bubbles-container">
+        <div class="bubble small" style="left: 5%; animation-delay: 0s;"></div>
+        <div class="bubble small" style="left: 12%; animation-delay: 0.5s;"></div>
+        <div class="bubble small" style="left: 18%; animation-delay: 1s;"></div>
+        <div class="bubble small" style="left: 25%; animation-delay: 1.5s;"></div>
+        <div class="bubble small" style="left: 33%; animation-delay: 2s;"></div>
+        <div class="bubble small" style="left: 40%; animation-delay: 2.5s;"></div>
+        <div class="bubble small" style="left: 48%; animation-delay: 3s;"></div>
+        <div class="bubble small" style="left: 55%; animation-delay: 3.5s;"></div>
+        <div class="bubble small" style="left: 62%; animation-delay: 4s;"></div>
+        <div class="bubble small" style="left: 70%; animation-delay: 4.5s;"></div>
+        <div class="bubble small" style="left: 77%; animation-delay: 5s;"></div>
+        <div class="bubble small" style="left: 84%; animation-delay: 5.5s;"></div>
+        <div class="bubble small" style="left: 91%; animation-delay: 6s;"></div>
+        <div class="bubble small" style="left: 8%; animation-delay: 6.5s;"></div>
+        <div class="bubble small" style="left: 15%; animation-delay: 7s;"></div>
+        <div class="bubble medium" style="left: 7%; animation-delay: 0.2s;"></div>
+        <div class="bubble medium" style="left: 14%; animation-delay: 0.8s;"></div>
+        <div class="bubble medium" style="left: 22%; animation-delay: 1.4s;"></div>
+        <div class="bubble medium" style="left: 30%; animation-delay: 2.1s;"></div>
+        <div class="bubble medium" style="left: 38%; animation-delay: 2.8s;"></div>
+        <div class="bubble medium" style="left: 45%; animation-delay: 3.4s;"></div>
+        <div class="bubble medium" style="left: 53%; animation-delay: 4.1s;"></div>
+        <div class="bubble medium" style="left: 60%; animation-delay: 4.8s;"></div>
+        <div class="bubble medium" style="left: 68%; animation-delay: 5.5s;"></div>
+        <div class="bubble medium" style="left: 75%; animation-delay: 6.2s;"></div>
+        <div class="bubble medium" style="left: 82%; animation-delay: 6.8s;"></div>
+        <div class="bubble medium" style="left: 89%; animation-delay: 7.5s;"></div>
+        <div class="bubble medium" style="left: 95%; animation-delay: 8s;"></div>
+        <div class="bubble large" style="left: 9%; animation-delay: 0.3s;"></div>
+        <div class="bubble large" style="left: 19%; animation-delay: 1.2s;"></div>
+        <div class="bubble large" style="left: 28%; animation-delay: 2.3s;"></div>
+        <div class="bubble large" style="left: 37%; animation-delay: 3.5s;"></div>
+        <div class="bubble large" style="left: 47%; animation-delay: 4.7s;"></div>
+        <div class="bubble large" style="left: 56%; animation-delay: 5.9s;"></div>
+        <div class="bubble large" style="left: 65%; animation-delay: 7.1s;"></div>
+        <div class="bubble large" style="left: 74%; animation-delay: 8.3s;"></div>
+        <div class="bubble large" style="left: 83%; animation-delay: 9.5s;"></div>
+        <div class="bubble large" style="left: 92%; animation-delay: 10.7s;"></div>
+        <div class="bubble large" style="left: 13%; animation-delay: 11.9s;"></div>
+        <div class="bubble large" style="left: 21%; animation-delay: 13s;"></div>
+        <div class="bubble large" style="left: 35%; animation-delay: 14s;"></div>
+        <div class="bubble large" style="left: 50%; animation-delay: 15s;"></div>
+        <div class="bubble large" style="left: 71%; animation-delay: 16s;"></div>
+    </div>
+
+    <!-- Small fish -->
+    <div class="small-fish-container">
+        <div class="small-fish fish-1"></div>
+        <div class="small-fish fish-2"></div>
+        <div class="small-fish fish-3"></div>
+        <div class="small-fish fish-4"></div>
+        <div class="small-fish fish-5"></div>
+        <div class="small-fish fish-6"></div>
+        <div class="small-fish fish-7"></div>
+        <div class="small-fish fish-8"></div>
+    </div>
+
+    <!-- Design Process -->
+    <div class="parchment-letter">
+        <h1>Design Process</h1>
+
+        <div class="blocks-container">
+            <div class="block">
+                <h2>SKETCHES</h2>
+                <div class="image-placeholder">
+                    <img src="image/sketch.jpeg" alt="Sketches">
+                </div>
+            </div>
+
+            <div class="block">
+                <h2>WIREFRAME</h2>
+                <div class="image-placeholder">
+                    <img src="image/wireframe.jpeg" alt="Wireframe">
+                </div>
+            </div>
+
+            <div class="block clickable">
+                <h2>FONTS AND PALETTE</h2>
+                <a href="fontsandpalette.html">
+                    <div class="image-placeholder">
+                        <img src="image/palette.png" alt="Fonts and Palette">
+                    </div>
+                </a>
+                </div>
+                
+    </div>
+
+    <!-- Reflection -->
+    <div class="reflection-block">
+        <div class="reflection-text">
+            <p>
+Telling someone “I can code” sounds cool. But cool things are hard, yes, and this was genuinely a nightmare at first. Errors everywhere, nothing working, completely lost. After receiving tutor feedback, I decided to give it more time. Spent a few nights on it, one day probably over 12 hours just on the homepage aquarium. I have a friend who raised fish, and honestly that’s where the whole underwater concept came from — someday I want to build him a real website, something with cool design and include his hobby into it. Overall, I’m happy with how it turned out. There are still bugs I couldn’t fix myself. Moving a tag and breaking the entire site is still a nightmare. But at least I went from a “chicken tech” to “know sthg” person. Alright, please scroll down.
+</p>
+            </p>
+        </div>
+    </div>
+
+    </div>
+
+</div>
+
+<!-- ============ SCROLL DOWN ============ -->
+<section class="extended-section">
+
+    <!-- Block 1 — -->
+<div class="ext-block">
+    <div class="ext-content">
+        <div class="text-box">
+        
+        <!-- Text -->
+        <h2>Process</h2>
+<p>
+It started with a sketch. My original concept was an ocean with four sea monsters: Megalodon, Kraken, and others. Each representing a section of the workbook.The ocean metaphor came from wanting the workbook to feel like exploration or game rather than documentation. You have to find it, catch it, to access the content. The gamification is I wanted someone to spend time in the site, not just scroll through it (and bcuz I love games). Finding the right PNGs, adding backgrounds, getting everything to sit correctly on screen: that was already more work than I expected.
+The fish were a particular challenge. Because they're flat images and not 3D models, flipping their direction mid-swim looked completely unnatural. And adjusting keyframes took forever! At various points the fish were teleporting, disappearing at full speed, zigzagging like they were panicking, or stretching like taffy. Understanding keyframes properly was a turning point. Each percentage (0%, 25%, 50%…) is a position in time, left controls horizontal position, top controls vertical. If a fish starts at left: 110% it begins off the right edge of the screen. If it ends at left: -200px it disappears off the left edge. The values in between create the path. Getting fish to loop smoothly meant making sure the start and end positions were off-screen on opposite sides, otherwise the fish would snap/teleport back to its starting point every loop. Honestly, I kind of enjoyed fixing it. There was something satisfying about watching them gradually swim properly.
+Time ran out before I could sort the fonts properly, check all the links, or fix the images. Then when I uploaded to GitHub it refused to load and I spent another chunk of time debugging that, pretty close to the deadline, pretty panicked.
+After tutor feedback, I rebuilt it. I found pixel fish GIFs and fell in love with them immediately - they changed the whole direction of the site. I was also really inspired by nekoweb.org around this time. The biggest ongoing frustration: fixing one small bug and watching the entire site vanish. Wrong stacking, overlapping settings, layouts that made no sense. It's gotten better. I've gotten better.  The second version got a lot more time and care: I wanted background music, a long scrollable page, a horizontal gallery. I managed some of it. The rest might still happen if I have the time.
+</div>
+
+
+
+        <!-- Gallery scroll horizontally -->
+        <div class="horizontal-gallery">
+            <div class="h-gallery-item">
+                <img src="image/oldweb.png" alt="Part A Website">
+                  <div class="caption">the very original version</div>
+            </div>
+                <div class="h-gallery-item">
+                <video width="100%" controls>
+                <source src="image/oceane3.mp4" type="video/mp4">
+            </video>
+                  <div class="caption">marathon fish</div>
+            </div>
+            <div class="h-gallery-item">
+                <video width="100%" controls>
+                <source src="image/oceane2.mp4" type="video/mp4">
+            </video>
+                  <div class="caption">teleporting fish</div>
+            </div>
+            <div class="h-gallery-item">
+                <video width="100%" controls>
+                <source src="image/oceane1.mp4" type="video/mp4">
+            </video>
+                  <div class="caption">stressed fish</div>
+            </div>
+
+            <div class="h-gallery-item">
+                <img src="image/error1.png" alt="Error in the second version">
+                  <div class="caption">Why the box cannot be brighter</div>
+            </div>
+            <div class="h-gallery-item">
+                <img src="image/error2.png" alt="Error">
+                  <div class="caption">buttons keep jumping outside the container</div>
+            </div>
+                     <div class="h-gallery-item">
+                <img src="image/error3.png" alt="Error">
+                  <div class="caption">decided to change the layout, but buttons keep jumping</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+    <div class="ext-block">
+    <div class="ext-content">
+        <div class="text-box">
+    <h2>References & Resources</h2>
+
+        <p>Fish GIFs — pinterest (free assets)</p>
+
+        <p>Ocean GIF background —pinterest </p>
+
+<p>
+            <a href="https://lambda.vgmtreasurechest.com/soundtracks/super-mario-odyssey-original-soundtrack/hovohtvz/1-25.%20Lake%20Lamode%20-%20Underwater%20Passage.mp3" target="_blank">Underwater Passage</a>
+</p>
+    <p>Lake Lamode soundtrack from Super Mario Odyssey. I wanted background music that felt like an underwater adventure, and this was the first one I found that fit the vibe. It’s a bit long, but I think it works well as a loop.
+          </p>
+
+        <p>p5.js — p5js.org</p>
+
+        <p>drawing canvas, github Karen Ann & Andy </p>
+
+        <p>vertical gallery and “treasure” gallery, github Karen Ann & Andy </p>
+
+        <p>Arduino code — adapted from class workshops, Karen Ann & Andy</p>
+        
+        <p>Typewriter effect — adapted from github, Karen Ann & Andy</p>
+
+        <p> speech bubbles, fish animations — developed with Claude, edited and customised by Sienna</p>
+
+        <p>Teleportacia — art.teleportacia.org</p>
+
+        <p>Nekoweb — nekoweb.org (design inspiration)</p>
+
+        
+
+        <p>Jersey 10 font — Google Fonts</p>
+        
+
+    </div>
+  <!-- Buttons -->
+    <div class="week-buttons">
+        <a href="week9.html">
+            <img src="image/backbutton.png" alt="previous" class="nav-btn">
+        </a>
+        <a href="index.html">
+            <img src="image/homebutton.png" alt="home" class="nav-btn">
+        </a>
+        <a href="week1.html">
+            <img src="image/nextbutton.png" alt="next" class="nav-btn">
+        </a>
+    </div>
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<footer class="site-footer">
+    <p>Sienna / 2026 / Interactive Media</p>
+</footer>
+
+
+</body>
+</html>

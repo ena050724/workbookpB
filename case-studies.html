@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body.week-page {
+            background-image: url('ocean.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        body.week-page::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 15, 40, 0.55);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        body.week-page .ocean-container {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            height: auto;
+            padding-bottom: 100px;
+        }
+
+        body.week-page .parchment-letter {
+            width: 90%;
+            max-width: 1100px;
+            margin: 60px auto;
+            position: relative;
+            left: unset;
+            top: unset;
+            transform: none;
+            padding: 40px;
+        }
+
+        body.week-page .footer {
+            position: relative;
+            margin-top: 40px;
+            bottom: unset;
+        }
+
+        .reflection-content h1 {
+            color: #064b7f;
+            margin-bottom: 20px;
+        }
+
+        .reflection-content p {
+            color: #064b7f;
+            font-size: 22px;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+
+    </style>
+</head>
+
+<body class="week-page">
+<div class="ocean-container">
+
+    <div class="sunlight-ray">
+        <div class="light-ray ray-1"></div>
+        <div class="light-ray ray-2"></div>
+        <div class="light-ray ray-3"></div>
+        <div class="light-ray ray-4"></div>
+        <div class="light-ray ray-5"></div>
+    </div>
+
+    <div class="bubbles-container">
+        <div class="bubble small" style="left: 5%; animation-delay: 0s;"></div>
+        <div class="bubble small" style="left: 12%; animation-delay: 0.5s;"></div>
+        <div class="bubble small" style="left: 25%; animation-delay: 1.5s;"></div>
+        <div class="bubble small" style="left: 40%; animation-delay: 2.5s;"></div>
+        <div class="bubble small" style="left: 55%; animation-delay: 3.5s;"></div>
+        <div class="bubble small" style="left: 70%; animation-delay: 4.5s;"></div>
+        <div class="bubble small" style="left: 84%; animation-delay: 5.5s;"></div>
+        <div class="bubble medium" style="left: 7%; animation-delay: 0.2s;"></div>
+        <div class="bubble medium" style="left: 22%; animation-delay: 1.4s;"></div>
+        <div class="bubble medium" style="left: 38%; animation-delay: 2.8s;"></div>
+        <div class="bubble medium" style="left: 53%; animation-delay: 4.1s;"></div>
+        <div class="bubble medium" style="left: 68%; animation-delay: 5.5s;"></div>
+        <div class="bubble medium" style="left: 82%; animation-delay: 6.8s;"></div>
+        <div class="bubble large" style="left: 9%; animation-delay: 0.3s;"></div>
+        <div class="bubble large" style="left: 28%; animation-delay: 2.3s;"></div>
+        <div class="bubble large" style="left: 47%; animation-delay: 4.7s;"></div>
+        <div class="bubble large" style="left: 65%; animation-delay: 7.1s;"></div>
+        <div class="bubble large" style="left: 83%; animation-delay: 9.5s;"></div>
+    </div>
+
+    <div class="small-fish-container">
+        <div class="small-fish fish-1"></div>
+        <div class="small-fish fish-2"></div>
+        <div class="small-fish fish-3"></div>
+        <div class="small-fish fish-4"></div>
+        <div class="small-fish fish-5"></div>
+        <div class="small-fish fish-6"></div>
+        <div class="small-fish fish-7"></div>
+        <div class="small-fish fish-8"></div>
+    </div>
+
+
+        <div class="reflection-content">
+        <div class="reflection-block">
+        <div class="reflection-text">
+    <h1>Case Studies</h1>
+    <p>A selection of experimental web projects exploring minimal layout, interactive reading systems, and playful useless interfaces.</p>
+<div class="page">
+
+
+<main class="case-list">
+
+<article class="case-card">
+
+<h2>
+<a href="https://tdingsun.github.io/aayushi/" target="_blank">
+tdingsun - Aayushi
+</a>
+</h2>
+
+<p class="description">
+This website uses a minimal layout with diverse interaction methods.
+
+Text can scroll vertically inside small blocks and slide horizontally,
+creating a reading experience similar to Japanese calligraphy panels,
+which makes navigation feel intentional and engaging.
+</p>
+
+</article>
+
+
+<article class="case-card">
+
+<h2>
+<a href="http://jetsetwilly.jodi.org" target="_blank">
+JET SET WILLY Variations ©1984
+</a>
+</h2>
+
+<p class="description">
+The website is extremely minimal, using a strong yellow background
+and tightly arranged images.
+
+The compressed composition creates the
+feeling of a fragmented visual narrative, almost like reading a story
+through sequential screenshots.
+</p>
+
+</article>
+
+
+<article class="case-card">
+
+<h2>
+<a href="https://paint.toys/oil/" target="_blank">
+Paint Toys – Oil
+</a>
+</h2>
+
+<p class="description">
+The title is striking and the site presents a collection of playful
+Japanese-style mini experiences such as stone stacking, pixel drawing,
+and scratch art. 
+
+The interface feels intentionally useless but 
+encouraging curiosity and exploration.
+</p>
+
+</article>
+  <article class="case-card">
+        <div class="card-number"></div>
+        <div class="card-content">
+          <h2>
+            <a href="https://deitch.com" target="_blank">Jeffrey Deitch</a>
+          </h2>
+          <p class="link-text">https://deitch.com</p>
+          <p>
+            This website feels visually rich and dynamic. The six image blocks
+            are all moving, which makes the homepage immediately feel alive.
+            When clicked, each image opens into more visual content, so the site
+            feels like a gallery that is already in motion before you even enter.
+
+          </p>
+        </div>
+      </article>
+
+      <article class="case-card">
+        <div class="card-number"></div>
+        <div class="card-content">
+          <h2>
+            <a href="https://art.teleportacia.org" target="_blank">Art.Teleportacia</a>
+          </h2>
+          <p class="link-text">https://art.teleportacia.org</p>
+          <p>
+            I really like the idea behind this site. It starts from a tiny home
+            button, but clicking it opens up endless little worlds. It feels
+            intimate and exploratory, almost like reading someone’s diary through
+            hyperlinks and discovering hidden thoughts page by page.
+          </p>
+        </div>
+      </article>
+
+      <article class="case-card">
+        <div class="card-number"></div>
+        <div class="card-content">
+          <h2>
+            <a href="https://simonehoang.com" target="_blank">Simone Hoang</a>
+          </h2>
+          <p class="link-text">https://simonehoang.com</p>
+          <p>
+            This website is very striking because each image starts blurred and
+            only becomes visible when the cursor hovers over it. The left bar
+            and top bar also move automatically, which makes the whole site feel
+            controlled, elegant, and aesthetic. The interaction is simple, but
+            very memorable.
+          </p>
+        </div>
+      </article>
+
+</main>
+</div>
+
+
+
+
+
+
+
+
+    <!-- Buttons -->
+    <div class="week-buttons">
+        <a href="week1.html">
+            <img src="image/backbutton.png" alt="previous" class="nav-btn">
+        </a>
+        <a href="index.html">
+            <img src="image/homebutton.png" alt="home" class="nav-btn">
+        </a>
+        <a href="week2.html">
+            <img src="image/nextbutton.png" alt="next" class="nav-btn">
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Sienna / 2026 / Interactive Media</p>
+    </div>
+
+</div><!-- end ocean-container -->
+</body>
+</html>

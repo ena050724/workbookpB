@@ -1,0 +1,1265 @@
+   /*/======OCEAN INTERACTIVE MEDIA - STYLESHEET
+   Pure HTML & CSS Website
+   ======================================== *
+/* === RESET & BASE STYLES === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;         
+    flex-direction: column;   
+    justify-content: center;        
+    min-height: 100vh;             
+    width: 100vw;               
+    margin: 0;
+    padding: 0;
+    color: black;
+    gap:0;
+    overflow-y: auto;         
+    overflow-x: hidden;        
+    font-family: 'Jersey 10', sans-serif;
+    background: #001f3f;      
+cursor: url('https://www.rw-designer.com/cursor-view/190622.png'), auto;
+}
+.big-fish:hover {
+cursor: url('https://www.rw-designer.com/cursor-view/190625.png'), pointer;
+}
+
+
+.parchment-letter .parchment-header h1 {   
+    color: #064b7f;      
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.week-page .parchment-letter h1,
+.week-page .blocks-container .block h2 {
+    font-family: 'Jersey 10', sans-serif;
+    color: #064b7f;    
+}
+
+
+.week-page .parchment-letter h1 {
+    font-family: 'Jersey 10', sans-serif;
+    font-size: 36px;     
+    margin-bottom: 20px;
+}
+
+.week-page .blocks-container .block h2 {
+    font-family: 'Jersey 10', sans-serif;
+    font-size: 20px;      
+    margin-bottom: 12px;
+}
+
+body.week-page .parchment-letter {
+    background-image: url('image/board.jpg');
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: none;
+    width: 90%;
+    max-width: 1100px;
+    min-height: unset;     
+    height: auto;          
+    margin: 60px auto;
+    padding: 40px;
+    background-repeat: no-repeat;
+}
+
+
+body.week-page .parchment-letter::before {
+    display: none;  
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.back-button {
+    font-size: 16px;
+    color: #55758b;
+    font-weight: bold;
+}
+
+/* === text reflection === */
+.reflection-block { 
+    background: linear-gradient(135deg, rgb(230, 119, 186) 0%, rgb(248, 197, 244) 50%, rgba(114, 185, 255, 0.87) 100%);
+    border-radius: 10px;
+    padding: 40px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+    min-height: 150px;
+    display: flex;
+}
+
+.reflection-text {
+    color: #064b7f;
+    font-size: 21px;
+    line-height: 1.5;
+    text-align: left;
+}
+/* === VIDEO SETTING === */
+.image-placeholder video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+/* === GALLERY VIDEO SETTING === */
+.gallery-item video {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+/* === ANIMATED WATER BACKGROUND === */
+.ocean-background {
+    position: absolute;
+    size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+    
+    /* === SUNLIGHT RAYS === */
+.sunlight-ray {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.light-ray {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    transform-origin: top;
+}
+
+.ray-1 {
+    left: 15%;
+    width: 130px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 40%, transparent 100%);
+    transform: skewX(-10deg);
+    animation: rayPulse 5s ease-in-out infinite;
+}
+
+.ray-2 {
+    left: 35%;
+    width: 90px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 40%, transparent 100%);
+    transform: skewX(-15deg);
+    animation: rayPulse 6s ease-in-out infinite 1s;
+}
+
+.ray-3 {
+    left: 55%;
+    width: 150px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.06) 40%, transparent 100%);
+    transform: skewX(-8deg);
+    animation: rayPulse 7s ease-in-out infinite 2s;
+}
+
+.ray-4 {
+    left: 75%;
+    width: 110px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.05) 40%, transparent 100%);
+    transform: skewX(-12deg);
+    animation: rayPulse 5.5s ease-in-out infinite 0.5s;
+}
+
+.ray-5 {
+    left: 5%;
+    width: 140px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.05) 40%, transparent 100%);
+    transform: skewX(-18deg);
+    animation: rayPulse 6.5s ease-in-out infinite 1.5s;
+}
+
+@keyframes rayPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+/* === FLOATING BUBBLES === */
+.bubbles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.3);
+    animation: floatUp 15s linear infinite;
+}
+
+/* Bubble Sizes */
+.bubble.small {
+    width: 12px;
+    height: 12px;
+}
+
+.bubble.medium {
+    width: 30px;
+    height: 30px;
+    animation-duration: 18s;
+}
+
+.bubble.large {
+    width: 50px;
+    height: 50px;
+    animation-duration: 22s;
+}
+
+/* Bubble hover effect */
+.bubble:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+@keyframes floatUp {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 110%;
+        opacity: 0;
+    }
+}
+
+/* === SMALL SWIMMING FISH === */
+.small-fish-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.small-fish {
+    position: absolute;
+    width: 30px;
+    height: 16px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 20"><ellipse cx="20" cy="10" rx="15" ry="7" fill="%23ffa07a" opacity="0.7"/><polygon points="5,10 0,5 0,15" fill="%23ffa07a" opacity="0.7"/><circle cx="28" cy="8" r="2" fill="%23000" opacity="0.5"/></svg>') no-repeat;
+    background-size: contain;
+}
+
+.fish-1 { animation: swimDiagonal1 12s linear infinite; }
+.fish-2 { animation: swimDiagonal2 15s linear infinite; }
+.fish-3 { animation: swimDiagonal3 10s linear infinite; }
+.fish-4 { animation: swimDiagonal4 13s linear infinite; }
+.fish-5 { animation: swimDiagonal5 11s linear infinite; }
+.fish-6 { animation: swimDiagonal6 14s linear infinite; }
+.fish-7 { animation: swimDiagonal7 16s linear infinite; }
+.fish-8 { animation: swimDiagonal8 9s linear infinite; }
+
+/* Diagonal swimming animations with bouncing */
+@keyframes swimDiagonal1 {
+    0% { left: -50px; top: 10%; }
+    25% { left: 25%; top: 30%; }
+    50% { left: 50%; top: 20%; }
+    75% { left: 75%; top: 40%; }
+    100% { left: 110%; top: 15%; }
+}
+
+@keyframes swimDiagonal2 {
+    0% { left: 110%; top: 20%; transform: scaleX(-1); }
+    25% { left: 75%; top: 40%; }
+    50% { left: 50%; top: 30%; }
+    75% { left: 25%; top: 50%; }
+    100% { left: -50px; top: 25%; }
+}
+
+@keyframes swimDiagonal3 {
+    0% { left: -50px; top: 60%; }
+    30% { left: 30%; top: 40%; }
+    60% { left: 60%; top: 70%; }
+    100% { left: 110%; top: 50%; }
+}
+
+@keyframes swimDiagonal4 {
+    0% { left: 110%; top: 70%; transform: scaleX(-1); }
+    40% { left: 60%; top: 50%; }
+    80% { left: 20%; top: 65%; }
+    100% { left: -50px; top: 55%; }
+}
+
+@keyframes swimDiagonal5 {
+    0% { left: 50%; top: -50px; }
+    50% { left: 30%; top: 50%; }
+    100% { left: 10%; top: 110%; }
+}
+
+@keyframes swimDiagonal6 {
+    0% { left: 20%; top: 110%; }
+    50% { left: 60%; top: 50%; }
+    100% { left: 80%; top: -50px; }
+}
+
+@keyframes swimDiagonal7 {
+    0% { left: -50px; top: 35%; }
+    50% { left: 50%; top: 60%; }
+    100% { left: 110%; top: 45%; }
+}
+
+@keyframes swimDiagonal8 {
+    0% { left: 110%; top: 55%; transform: scaleX(-1); }
+    50% { left: 40%; top: 35%; }
+    100% { left: -50px; top: 48%; }
+}
+
+/* === MYTHICAL SEA CREATURES (Big Fish) === */
+.mythical-creatures {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+    gap: 50px;       
+    flex-wrap: nowrap;  
+    overflow-x: auto;   
+    padding: 20px;
+}
+
+.big-fish {
+    position:absolute;
+    overflow: visible;
+    transition: transform 0.3s ease;
+}
+
+/* Individual Fish Positions */
+.stingray {
+    left: 20%;
+    top: -200px;
+    width: 300px;
+    height: 180px;
+    background: url("image/stingray.gif") no-repeat center;
+    background-size: contain;
+   animation: swimBig1 40s linear infinite;
+}
+
+.blowfish {
+    left: 110px;
+    top: 30%;
+    width: 120px;
+    height: 75px;
+    background: url("image/blowfish.gif") no-repeat center;
+    background-size: contain;
+    transform: scaleX(1);
+    animation: swimBig3 28s linear infinite;
+}
+
+.whale {
+    left: -250px;
+    top: 55%;
+    width: 155px;
+    height: 118px;
+    background: url("image/whale.gif") no-repeat center;
+    background-size: contain;
+    animation: swimBig2 28s linear infinite;
+}
+.crab {
+    left: 110px;
+    top: 75%;
+    width: 310px;   
+    height: 190px;
+    background: url("image/crab.gif") no-repeat center;
+    background-size: contain;
+    animation: swimBig4 18s linear infinite;
+}
+.octopus {
+    left: -300px;
+    top: 50%;
+    width: 300px;
+    height: 180px;
+    background: url("image/octopus.gif") no-repeat center;
+    background-size: contain;
+   animation: swimBig5 30s linear infinite;
+}
+
+.squid {
+    left: 900px;
+    top: 20%;
+    width: 200px;
+    height: 120px;
+    background: url("image/squid.gif") no-repeat center;
+    background-size: contain;
+    animation: swimBig8 30s linear infinite;
+}
+   
+.jellyfish {
+    left: -200px;
+    top: 50%;
+    width: 240px;
+    height: 150px;
+    background: url("image/jellyfish.gif") no-repeat center;
+    background-size: contain;
+    transform: scaleX(1);
+    animation: swimBig6 35s linear infinite;
+}
+
+.oyster {
+    position: absolute;
+    left: 900px;
+    top: 19%;
+    width: 105px;
+    height: 63px;
+    background: url("image/oyster.gif") no-repeat center;
+    background-size: contain;
+    z-index: 15;
+}
+
+.seahorse {
+    left: 110px;
+    top: 65%;
+    width: 105px;   
+    height: 95px;
+    background: url("image/seahorse.gif") no-repeat center;
+    background-size: contain;
+    mix-blend-mode: screen;
+    animation: swimBig7 25s linear infinite;
+   
+}
+.seal{
+    position: absolute;
+    left: 200px;
+    top: 23%;
+    width: 200px;
+    height: 120px;
+    background: url("image/seal.gif") no-repeat center;
+    background-size: contain;
+    z-index: 15;
+}
+/* Hover Effects */
+.big-fish:hover {
+    transform: scale(1.2) scaleX(1);
+}
+
+
+/* Swimming Animations */
+@keyframes swimBig1 {
+    0% { left:110%; top:40%; }
+    25% { left:75%; top: 45%; }
+    50% { left:20%; top: 38%; }
+    75% { left:2px;; top: 32%; }
+    100% { left:-200px;top: 30%; }
+}
+
+@keyframes swimBig2 {
+    0% { left: 110%; top: 20%; transform: scaleX(1); }
+    25% { left: 80%; top: 5%; transform: scaleX(1); }
+    50% { left:50%; top: 25%; transform: scaleX(1); }
+    75% { left:1%; top: 20%; transform: scaleX(1); }
+    100% { left:-300px; top: 15%; transform: scaleX(1); }
+    
+}
+
+@keyframes swimBig3 {
+    0% { left:-250px; top:40%; }
+    25% { left:40%; top: 50%; }
+    50% { left:70%; top: 80%; }
+    75% { left:78%; top: 65%; }
+    100% { left:110%;top: 58%; }
+}
+
+@keyframes swimBig4 {
+    0% { left: 110px; top: 65%; transform: scaleX(1); }
+    25% { left: 75%; top: 75%; transform: scaleX(1); }
+    50% { left:45%; top: 70%; transform: scaleX(1); }
+    75% { left:20%; top: 62%; transform: scaleX(1); }
+    100% { left:-200px; top: 78%; transform: scaleX(1); }
+}
+@keyframes swimBig5 {
+    0% { left:-300px; top:60%; }
+    25% { left:22%; top: 70%; }
+    50% { left:70%; top: 40%; }
+    75% { left:98%; top: 20%; }
+    100% { left:110%;top: 18%; }
+}
+
+@keyframes swimBig6 {
+    0% { left:-200px; top:50%; transform: scaleX(1); }
+    25% { left:20%; top: 10%; transform: scaleX(1); }
+    50% { left:45%; top: 6%; transform: scaleX(1); }
+    75% { left:70%; top: 1%; transform: scaleX(1); }
+    100% { left:100%; top: 5%; transform: scaleX(1); }
+}
+
+@keyframes swimBig7 {
+    0% { left: 110%; top: 20%; transform: scaleX(1); }
+    25% { left: 60%; top: 50%; transform: scaleX(1); }
+    50% { left:20%; top: 65%; transform: scaleX(1); }
+    75% { left:1%; top: 70%; transform: scaleX(1); }
+    100% { left:-300px; top: 85%; transform: scaleX(1); }
+}
+
+@keyframes swimBig8 {
+    0%   { left: -300px; top: 30%; }
+    25%  { left: 25%; top: 42%; }
+    50%  { left: 50%; top: 30%; }
+    75%  { left: 75%; top: 41%; }
+    100% { left: 110%; top: 30%; }
+}
+
+/* Fish Labels */
+.fish-label {
+    width: fit-content;
+    margin-top: 8px;
+    padding: 6px 12px;
+    background: rgba(52, 100, 151, 0.6);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* === OLD PARCHMENT LETTER === */
+.parchment-letter {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 600px;
+max-width: 90vw;
+min-height: 400px; 
+transition: transform 0.3s ease;
+z-index: 10;
+border-radius: 20px;
+}
+
+.parchment-letter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: -1;
+    background-image: url('image/board.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+    opacity: 0.95;
+    border-radius: 20px;
+}
+.parchment-header,
+.letter-content {
+    position: relative;
+    z-index: 2;
+   max-width: 300px;
+   max-height: 300px;
+      margin: 60px auto;
+}
+
+@keyframes letterAppear {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.letter-content {
+    color: #064b7f;
+    font-size: 20px;
+    line-height: 1;
+}
+
+
+.creature-list {
+    font-size: 16px;
+    margin: 0px 20px;
+}
+
+.creature-list p {
+    margin: 5px 0;
+}
+
+.creature-name {
+    display: inline-block;
+    width: 180px;
+    font-weight: 500;
+}
+
+.week-label {
+    opacity: 0.7;
+}
+
+
+
+
+
+/* === FOOTER === */
+.footer {
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.footer p {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+    .parchment-letter {
+        padding: 30px;
+        width: 95vw;
+    }
+
+    .letter-header h1 {
+        font-size: 24px;
+    }
+
+    .letter-content {
+        font-size: 20px;
+    }
+
+    .creature-name {
+        width: 110px;
+    }
+}
+
+    
+
+@media (max-width: 480px) {
+    .letter-header h1 {
+        font-size: 20px;
+    }
+
+    .letter-content {
+        font-size: 13px;
+    }
+
+    .wax-seal {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+
+.week-page .parchment-letter {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.blocks-container {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px;                      
+    margin-top: 30px;
+}
+
+.block {
+    flex: 1;                   
+    min-width: 200px;          
+    max-width: 350px;          
+    padding: 20px;
+    background: #fff9f0;       
+    border: 1px solid #e0d7c1;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.block h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.block .image-placeholder {
+    width: 100%;               
+    height: 250px;             
+    background-color: #e6e2d3; 
+    margin-top: 15px;
+    border-radius: 6px;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.image-placeholder {
+    overflow: visible; 
+}
+
+.block.clickable {
+    position: relative;
+}
+/* click me effect for clickable blocks */
+.block.clickable::after {
+    content: 'click me!';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 110, 188, 0.9);
+    color: white;
+    padding: 40px 80px;
+    border-radius: 20px;
+    font-size: 30px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.block.clickable:hover::after {
+    opacity: 1;
+}
+
+
+.image-placeholder img:hover {
+    transform: scale(1.5); 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    z-index: 10;
+    position: relative;
+}
+
+.week-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.week-buttons a {
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 0px;
+    font-weight: bold;
+}
+
+.nav-btn {
+    width: 150px;      
+    height: 150px;
+    object-fit: contain;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    transform: scale(1.1);
+}
+.long-page {
+    min-height: 200svh;
+    overflow-y: auto;
+
+}
+html {
+    overflow-y: auto;
+}
+/*===========
+SECTION 1 — TYPEWRITER INTRO
+============================================ */
+#intro-section {
+position: relative;
+width: 100%;
+height: 100vh;
+min-height: 100vh;
+overflow: hidden;
+background: #000;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+padding: 0 8vw;
+z-index: 100;
+}
+
+.welcome-txt {
+    font-size: clamp(1rem, 2vw, 1.6rem);
+    font-family: 'Jersey 10', regular;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.8;
+    max-width: 680px;
+    padding:0 8vw;
+
+}
+
+#typewriter-text::after {
+content: '|';
+animation: blink 0.75s step-end infinite;
+color: #fff;
+margin-left: 2px;
+}
+
+#typewriter-text.done::after {
+display: none;
+}
+
+@keyframes blink {
+0%, 100% { opacity: 1; }
+50% { opacity: 0; }
+}
+
+#scroll-hint {
+position: absolute;
+bottom: 48px;
+left: 8vw;
+font-size: 0.75rem;
+font-weight: 300;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+color: rgba(255,255,255,0.4);
+opacity: 0;
+transition: opacity 0.8s ease;
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+#scroll-hint.visible { opacity: 1; }
+
+#scroll-hint::before {
+content: '';
+display: block;
+width: 32px;
+height: 1px;
+background: rgba(255,255,255,0.4);
+}
+
+#intro-section,
+#ocean-section,
+.ocean-container,
+#history-section {
+    width: 100%;
+}
+/* ============================================
+SECTION 2 — OCEAN VIDEO BG
+============================================ */
+
+.ocean-section {
+position: relative;
+z-index: 1;
+}
+
+#ocean-section {
+position: relative;
+background: #001f3f;
+}
+
+#ocean-section::before {
+content: '';
+position: absolute;
+inset: 0;
+background-image: url('ocean.gif');
+background-size: cover;
+background-position: center;
+opacity: 0.5;
+z-index: 0;
+background-repeat: no-repeat;
+overflow: hidden;
+}
+
+
+.ocean-container {
+position: relative;
+z-index: 2;
+min-height: 100vh;
+}
+
+/* ============================================
+SECTION 3 — THE OCEAN HISTORY
+============================================ */
+#history-section {
+position: relative;
+background-image: url('image/p3bg.gif');
+background-size: cover;
+}
+#history-section::before {
+content: '';
+position: absolute;
+inset: 0;
+background: rgba(0, 0, 0, 0.5);   
+z-index: 0;
+}
+
+.history-header { margin-bottom: 64px; }
+
+.history-label {
+display: block;
+font-size: 0.7rem;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: rgba(255, 255, 255, 0.35);
+margin-bottom: 16px;
+}
+
+.history-title {
+font-family: 'Jersey 10', serif;
+font-weight: 300;
+font-style: italic;
+font-size: clamp(2rem, 5vw, 3.5rem);
+color: #fff;
+line-height: 1.1;
+z-index: 12;
+}
+
+.gallery {
+  column-count: 3;
+  column-gap: 1rem;
+  width: 100%;
+  padding: 0 8vw;
+}
+
+.gallery > *{
+  width: 100%;
+  margin-bottom: 1rem;
+  break-inside: avoid;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  break-inside: avoid;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+ 
+}
+
+.gallery-item:hover .caption {
+  transform: translateY(0);
+}
+
+.caption {
+position: absolute;
+bottom: 0; left: 0; right: 0;
+background: rgba(255, 110, 188, 0.859);
+color: white;
+padding: 0.5rem;
+transform: translateY(100%);
+transition: 0.3s;
+font-size: 0.8rem;
+text-transform: uppercase;
+}
+
+.gallery-item:hover .caption {
+transform: translateY(0);
+}
+
+/* Footer */
+.site-footer {
+background: #000;
+padding: 32px 8vw;
+display: flex;
+justify-content: center;
+align-items: center;
+border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.site-footer p {
+font-size: 1rem;
+font-weight: 300;
+letter-spacing: 0.1em;
+color: rgb(255, 255, 255);
+text-transform: lowercase;
+}
+
+
+/* DESIGN PROCESS SCROLL SECTION */
+.extended-section {
+    width: 100%;
+}
+.ext-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;        
+    max-width: 900px;
+    color: white;
+    text-align: left;
+    font-size: 22px;
+    line-height: 1.6;   
+}
+.ext-block {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: flex-start;   
+    justify-content: center;   
+    padding: 80px 8vw;
+}
+.horizontal-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    margin-top: 30px;
+    width: 100vw;
+    margin-left: calc(-8vw);
+    padding-left: 8vw;
+    padding-right: 8vw;
+}
+
+.horizontal-gallery::-webkit-scrollbar {
+    height: 4px;
+}
+
+.horizontal-gallery::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.1);
+}
+
+.horizontal-gallery::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.3);
+    border-radius: 2px;
+}
+
+.h-gallery-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.h-gallery-item img {
+    height: 300px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+.h-gallery-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;  
+}
+
+.h-gallery-item .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 106, 198, 0.945);
+    color: white;
+    padding: 8px 12px;
+    font-size: 15px;
+    transform: translateY(100%);
+    transition: 0.3s;
+}
+
+.h-gallery-item:hover .caption {
+    transform: translateY(0);
+}
+.text-box {
+    position: relative;
+    padding: 40px 80px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 75vw;
+    margin-left: calc(-7.5vw);
+    border-radius: 0;  
+    margin-right: -200px;      
+}
+
+.text-box::before {
+    content: '';
+    position: absolute;
+    background-image: url('image/purplebg.jpeg');
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: 0;
+    border-radius: 20px;
+}
+
+.text-box p,
+.text-box h2 {
+    position: relative;
+    z-index: 1; 
+    font-size: 25px;   
+    color: #064b7f;
+}
+.h-gallery-item video {
+    height: 300px;      
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+#sketch-container {
+    width: 100%;
+    aspect-ratio: 16/16;  
+    overflow: hidden;
+}
+
+#sketch-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+/* fish talk*/ 
+.fish-speech-popup {
+    position: absolute;
+    background: rgb(209, 50, 162);
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 18px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.1s;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translateX(-50%);
+}
+
+.fish-speech-popup::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid transparent;
+    border-top-color: white;
+    border-bottom: none;
+}
+
+/* free draw section */
+#draw-section {
+    width: 100%;
+    max-width: 100%;
+    min-height: 80vh;        
+    margin: 0;            
+    padding: 40px 0;
+    text-align: center;
+    background-image: url('image/drawingbg.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+    position: relative;
+}
+
+#free-draw {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;   
+}
+
+#free-draw canvas {
+    border-radius: 10px;
+    width: 100% !important;
+    height: 400px !important;
+}
+
+
+.draw-label {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    margin-bottom: 12px;
+}
+
+#draw-section button {
+    margin-top: 12px;
+    font-family: 'Jersey 10', sans-serif;
+    background: rgba(255, 106, 198, 0.945);
+    color: white;
+    padding: 6px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.2s;
+}
+
+#draw-section button:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+#music-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+    background: rgba(255, 106, 198, 0.945);
+    color: white;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+}
+
+#music-btn:hover {
+    background: rgba(202, 61, 148, 0.945);
+    transform: scale(1.1);
+}
+pre {
+    background: #f6e6ff;
+    border-radius: 8px;
+    padding: 20px;
+    overflow-x: auto;
+    margin: 16px 0;
+    position: relative;
+    z-index: 2;      
+}
+
+code {
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    color: #28004d;
+    line-height: 1;
+}
+.text-box p,
+.text-box h2,
+.text-box pre {
+    position: relative;
+    z-index: 2;
+}

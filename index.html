@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ocean</title>
+     <!-- Google Fonts -->
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+   
+<body>
+
+    <audio id="bg-music" loop>
+    <source src="image/oceanbg.mp3" type="audio/mpeg">
+</audio>
+
+<!-- fixed music button -->
+<button id="music-btn" onclick="toggleMusic()">🔊</button>
+
+    <!-- Typewriter Intro -->
+    <section id="intro-section">
+        <div id="welcomeType" class="welcome-txt"></div>
+        <div id="scroll-hint">scroll to enter</div>
+    </section>
+
+<section id="ocean-section">
+    <div class="ocean-container">
+        <!-- Sunlight Ray -->
+        <div class="sunlight-ray">
+             <div class="light-ray ray-1"></div>
+            <div class="light-ray ray-2"></div>
+            <div class="light-ray ray-3"></div>
+            <div class="light-ray ray-4"></div>
+            <div class="light-ray ray-5"></div>
+        </div>
+        <!-- Floating Bubbles (50 bubbles with different sizes and positions) -->
+         <div class="bubbles-container">
+             <!-- Small Bubbles -->
+            <div class="bubble small" style="left: 5%; animation-delay: 0s;"></div>
+            <div class="bubble small" style="left: 12%; animation-delay: 0.5s;"></div>
+            <div class="bubble small" style="left: 18%; animation-delay: 1s;"></div>
+            <div class="bubble small" style="left: 25%; animation-delay: 1.5s;"></div>
+            <div class="bubble small" style="left: 33%; animation-delay: 2s;"></div>
+            <div class="bubble small" style="left: 40%; animation-delay: 2.5s;"></div>
+            <div class="bubble small" style="left: 48%; animation-delay: 3s;"></div>
+            <div class="bubble small" style="left: 55%; animation-delay: 3.5s;"></div>
+            <div class="bubble small" style="left: 62%; animation-delay: 4s;"></div>
+            <div class="bubble small" style="left: 70%; animation-delay: 4.5s;"></div>
+            <div class="bubble small" style="left: 77%; animation-delay: 5s;"></div>
+            <div class="bubble small" style="left: 84%; animation-delay: 5.5s;"></div>
+            <div class="bubble small" style="left: 91%; animation-delay: 6s;"></div>
+            <div class="bubble small" style="left: 8%; animation-delay: 6.5s;"></div>
+            <div class="bubble small" style="left: 15%; animation-delay: 7s;"></div>
+    <!-- Medium Bubbles -->
+            <div class="bubble medium" style="left: 7%; animation-delay: 0.2s;"></div>
+            <div class="bubble medium" style="left: 14%; animation-delay: 0.8s;"></div>
+            <div class="bubble medium" style="left: 22%; animation-delay: 1.4s;"></div>
+            <div class="bubble medium" style="left: 30%; animation-delay: 2.1s;"></div>
+            <div class="bubble medium" style="left: 38%; animation-delay: 2.8s;"></div>
+            <div class="bubble medium" style="left: 45%; animation-delay: 3.4s;"></div>
+            <div class="bubble medium" style="left: 53%; animation-delay: 4.1s;"></div>
+            <div class="bubble medium" style="left: 60%; animation-delay: 4.8s;"></div>
+            <div class="bubble medium" style="left: 68%; animation-delay: 5.5s;"></div>
+            <div class="bubble medium" style="left: 75%; animation-delay: 6.2s;"></div>
+            <div class="bubble medium" style="left: 82%; animation-delay: 6.8s;"></div>
+            <div class="bubble medium" style="left: 89%; animation-delay: 7.5s;"></div>
+            <div class="bubble medium" style="left: 95%; animation-delay: 8s;"></div>
+            <div class="bubble medium" style="left: 10%; animation-delay: 8.5s;"></div>
+            <div class="bubble medium" style="left: 17%; animation-delay: 9s;"></div>
+            <div class="bubble medium" style="left: 24%; animation-delay: 9.5s;"></div>
+            <div class="bubble medium" style="left: 31%; animation-delay: 10s;"></div>
+            <div class="bubble medium" style="left: 39%; animation-delay: 10.5s;"></div>
+            <div class="bubble medium" style="left: 46%; animation-delay: 11s;"></div>
+            <div class="bubble medium" style="left: 54%; animation-delay: 11.5s;"></div>
+
+            <!-- Large Bubbles -->
+            <div class="bubble large" style="left: 9%; animation-delay: 0.3s;"></div>
+            <div class="bubble large" style="left: 19%; animation-delay: 1.2s;"></div>
+            <div class="bubble large" style="left: 28%; animation-delay: 2.3s;"></div>
+            <div class="bubble large" style="left: 37%; animation-delay: 3.5s;"></div>
+            <div class="bubble large" style="left: 47%; animation-delay: 4.7s;"></div>
+            <div class="bubble large" style="left: 56%; animation-delay: 5.9s;"></div>
+            <div class="bubble large" style="left: 65%; animation-delay: 7.1s;"></div>
+            <div class="bubble large" style="left: 74%; animation-delay: 8.3s;"></div>
+            <div class="bubble large" style="left: 83%; animation-delay: 9.5s;"></div>
+            <div class="bubble large" style="left: 92%; animation-delay: 10.7s;"></div>
+            <div class="bubble large" style="left: 13%; animation-delay: 11.9s;"></div>
+            <div class="bubble large" style="left: 21%; animation-delay: 13s;"></div>
+            <div class="bubble large" style="left: 35%; animation-delay: 14s;"></div>
+            <div class="bubble large" style="left: 50%; animation-delay: 15s;"></div>
+            <div class="bubble large" style="left: 71%; animation-delay: 16s;"></div>
+        </div>
+        <!-- Small swimming fish -->
+        <div class="small-fish-container">
+             <div class="small-fish fish-1"></div>
+            <div class="small-fish fish-2"></div>
+            <div class="small-fish fish-3"></div>
+            <div class="small-fish fish-4"></div>
+            <div class="small-fish fish-5"></div>
+            <div class="small-fish fish-6"></div>
+            <div class="small-fish fish-7"></div>
+            <div class="small-fish fish-8"></div>
+        </div>
+
+
+        <!-- Mythical Sea Creatures (Navigation Fish) -->
+        <div class="mythical-creatures">
+            <!-- stngray- Week 1 -->
+             <a href="week1.html">
+            <div class="big-fish stingray" onclick="fishTalk(event)">
+                <div class="fish-label">stingray</div>
+                <div class="fish-speech"></div>
+            </div>
+            </a>
+             <!-- blowfish - Week 2 -->
+              <a href="week2.html">
+            <div class="big-fish blowfish" onclick="fishTalk(event)">
+                <div class="fish-label">blowfish</div>
+                <div class="fish-speech"></div>
+            </div>
+            </a>
+
+            <!-- whale - Week 3 -->
+             <a href="week3.html">
+            <div class="big-fish whale" onclick="fishTalk(event)">
+                <div class="fish-label">Whale</div>
+              
+            </div>
+            </a>
+
+            <!-- crab - Design Process -->
+             <a href="designprocess.html">
+            <div class="big-fish crab" onclick="fishTalk(event) ">
+                <div class="fish-label">crab</div>
+           
+            </div>
+           </a>
+           
+           <!-- octopus - week 4  -->
+             <a href="week4.html">
+            <div class="big-fish octopus" onclick="fishTalk(event)">
+                <div class="fish-label">octopus</div>
+           
+            </div>
+            </a>
+
+            <!-- shinyj - week 5 -->
+             <a href="week5.html">
+            <div class="big-fish squid" onclick="fishTalk(event)">
+                <div class="fish-label">squid</div>
+           
+            </div>
+            </a>
+
+            <!-- jellyfish - Week 6 -->
+             <a href="week6.html">
+            <div class="big-fish jellyfish" onclick="fishTalk(event)">
+                <div class="fish-label">Jellyfish</div>
+            
+            </div>
+            </a>
+
+            <!-- oyster - Week 7 -->
+             <a href="week7.html">
+            <div class="big-fish oyster" onclick="fishTalk(event)">
+                <div class="fish-label">oyster</div>
+             
+            </div>
+           </a>
+
+           <!-- seahorse - Week 8 -->
+             <a href="week8.html">
+            <div class="big-fish seahorse" onclick="fishTalk(event)">
+                <div class="fish-label">seahorse</div>
+          
+            </div>
+           </a>
+        </div>
+         <!-- seal - Week 9-->
+              <a href="week9.html">
+            <div class="big-fish seal" onclick="fishTalk(event)">
+                <div class="fish-label">seal</div>
+   
+            </div>
+            </a>
+            
+        <!-- Old parchment letter -->
+        <div class="parchment-letter">
+            <div class="parchment-header">
+                <h1> catch the fish! </h1>
+            </div>
+            <div class="letter-content">
+
+                <div class="creature-list">
+                    <p><span class="creature-name">stingray:</span> <span class="week-label">Week 1</span></p>
+                    <p><span class="creature-name">blowfish:</span> <span class="week-label">Week 2</span></p>
+                    <p><span class="creature-name">whale:</span> <span class="week-label">Week 3</span></p>
+                    <p><span class="creature-name">octopus:</span> <span class="week-label">Week 4</span></p>
+                    <p><span class="creature-name">jellyfish:</span> <span class="week-label">Week 6</span></p>
+                    <p><span class="creature-name">oyster:</span> <span class="week-label">Week 7</span></p>
+                    <p><span class="creature-name">seahorse:</span> <span class="week-label">Week 8</span></p>
+                    <p><span class="creature-name">seal:</span> <span class="week-label">Week 9</span></p>
+                    <p><span class="creature-name">crab:</span> <span class="week-label">DP</span></p>
+                </div>
+
+            </div>
+  
+        </div>      
+    </div>
+ </section>
+
+     <section id="history-section">
+        <div class="history-header">
+            <span class="history-label">View all photos here!</span>
+            <h2 class="history-title"> The Ocean's <em> </em> Treasures</h2>
+        </div>
+
+      <div class="gallery">
+  <!-- Repeat this item -->
+<div class="gallery-item">
+    <img src="image/avatar.jpg" alt="Week 1 - Case Studies">
+    <div class="caption">Case Study, Avatar, Nava Films</div>
+</div>
+
+<div class="gallery-item">
+        <img src="image/crazy8.jpeg" alt="Week 2 - Tag Game">
+        <div class="caption">Crazy 8, Interactive Media 2026, Class Activity</div>
+</div>
+
+<div class="gallery-item">
+            <video width="100%" controls>
+                <source src="image/headspace.mov" type="video/mp4">
+            </video>
+            <div class="caption">Head Space, Interactive Media 2026, Tesltra Creator Space</div>
+        </div>
+
+      <div class="gallery-item">
+    <img src="image/arduino.jpg" alt="Week 6 - Arduino">
+    <div class="caption">Arduino, Interactive Media 2026, Tesltra Creator Space</div>
+</div>
+
+<div class="gallery-item">
+            <video width="100%" controls>
+                <source src="image/touchmusicmachine.mov" type="video/mp4">
+            </video>
+            <div class="caption">Touch Music Machine, Interactive Media 2026, Tesltra Creator Space</div>
+        </div>
+      <div class="gallery-item">
+        <img src="image/favourite-website.png" alt="Week 3 - Favourite Website">
+        <div class="caption">Favourite Website, Interactive Media 2026, X-ings</div>
+ </div>
+      <div class="gallery-item">
+            <video width="100%" controls>
+                <source src="image/fishplayground.mov" type="video/mp4">
+            </video>
+            <div class="caption">Fish Playground, Interactive Media 2026, Tesltra Creator Space</div>
+        </div>
+
+<div class="gallery-item">
+        <img src="image/paperprototyping.jpeg" alt="Week 2 - Paper Prototyping">
+        <div class="caption">Paper Prototyping, Interactive Media 2026, Class Activity</div>
+</div>
+ 
+      <div class="gallery-item">
+        <img src="image/tag.jpeg" alt="Week 2 - Tag Game">
+        <div class="caption">Tag Game, Interactive Media 2026, Class Activity</div>
+ </div>
+
+</div>
+        </section>
+
+           
+
+<script>
+const fishLines = [
+    "noooo, don't fry me!",
+    "i'm a young fish!!",
+    "please i have a dog and a family",
+    "i taste terrible i promise",
+    "not today human",
+    "i am a rare species!",
+    "leave me aloneeee",
+    "bloop bloop",
+    "…i saw nothing.",
+    "touch me again i dare you"
+];
+
+function fishTalk(event) {
+    event.preventDefault();
+    const fish = event.currentTarget;
+    const rect = fish.getBoundingClientRect();
+
+    const speech = document.createElement('div');
+    speech.className = 'fish-speech-popup';
+    speech.textContent = fishLines[Math.floor(Math.random() * fishLines.length)];
+    speech.style.left = (rect.left + rect.width / 2) + 'px';
+    speech.style.top = (rect.top - 50 + window.scrollY) + 'px';
+    document.body.appendChild(speech);
+
+    setTimeout(() => speech.style.opacity = '1', 10);
+    setTimeout(() => {
+        speech.style.opacity = '0';
+        setTimeout(() => {
+            speech.remove();
+            window.location.href = fish.closest('a').href;
+        }, 300);
+    }, 1000);
+}
+const music = document.getElementById('bg-music');
+music.volume = 0.4; 
+
+function toggleMusic() {
+    const btn = document.getElementById('music-btn');
+    if (music.paused) {
+        music.play();
+        btn.textContent = '🔊';
+    } else {
+        music.pause();
+        btn.textContent = '🔇';
+    }
+}
+
+/*start after typewriter */
+setTimeout(() => {
+    music.play().catch(() => {
+        /* click first */
+    });
+}, 3000);
+</script>
+
+
+<script>
+var data = [
+{
+welcomeType:
+"<span>hi, i'm sienna.<br/><br/>welcome to my interactive media workbook -<br/> in here you can discover my experiments <br/> with creative coding,p5.js,<br/>and physical computing,<br/><br/>it's a little chaotic. so be careful.</span>",
+},
+];
+
+var allElements = document.getElementsByClassName("welcome-txt");
+for (var j = 0; j < allElements.length; j++) {
+var currentElementId = allElements[j].id;
+var currentElementIdContent = data[0][currentElementId];
+var element = document.getElementById(currentElementId);
+var devTypeText = currentElementIdContent;
+
+// type code
+var i = 0,
+isTag,
+text;
+(function type() {
+text = devTypeText.slice(0, ++i);
+if (text === devTypeText) return;
+element.innerHTML = text + `<span class='blinker'>&#32;</span>`;
+var char = text.slice(-1);
+if (char === "<") isTag = true;
+if (char === ">") isTag = false;
+if (isTag) return type();
+setTimeout(type, 50);
+})();
+}
+</script>
+
+<!-- Section canvas  -->
+<div id="draw-section">
+    <p class="draw-label">✦ draw something ✦</p>
+    <div id="free-draw"></div>
+    <button onclick="clearCanvas()">clear</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+<script>
+const drawSketch = (p) => {
+    p.setup = () => {
+        let canvas = p.createCanvas(800, 300);
+        canvas.parent('free-draw');
+        p.background(0);
+    }
+    p.draw = () => {
+        if (p.mouseIsPressed) {
+            p.stroke(p.random(255), p.random(255), p.random(255));
+            p.strokeWeight(6);
+            p.line(p.pmouseX, p.pmouseY, p.mouseX, p.mouseY);
+        }
+    }
+    window.clearCanvas = () => p.background(0);
+}
+new p5(drawSketch);
+</script>       
+     <!-- Footer -->
+        <footer class="site-footer">
+            <p>Sienna / 2026 / Interactive Media</p>
+        </footer>
+
+<!-- This code from Figma was hacked by Sienna -->
+</body>
+</html> 

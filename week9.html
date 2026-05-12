@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oceania - Week 9</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+body.week-page {
+background-image: url('ocean.gif');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+min-height: 100vh;
+}
+
+
+body.week-page::before {
+content: '';
+position: fixed;
+inset: 0;
+background: rgba(0, 15, 40, 0.55);
+z-index: 0;
+pointer-events: none;
+}
+
+
+body.week-page .ocean-container {
+position: relative;
+z-index: 1;
+}
+
+body.week-page .parchment-letter {
+width: 90%;
+max-width: 1100px;
+margin: 60px auto;
+position: relative;
+left: unset;
+top: unset;
+transform: none;
+}
+body.week-page .ocean-container {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    height: auto;          
+    padding-bottom: 100px;  
+}
+
+
+.reflection-img {
+    width: 100%;
+    height: auto;          
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.5);
+}
+
+
+body.week-page .footer {
+    position: relative;  
+    margin-top: 40px;
+    bottom: unset;
+}
+
+
+</style>
+</head>
+<body class="week-page">
+<!-- Ocean Background Container -->
+<div class="ocean-container">
+
+        <!-- Sunlight Ray -->
+        <div class="sunlight-ray">
+             <div class="light-ray ray-1"></div>
+            <div class="light-ray ray-2"></div>
+            <div class="light-ray ray-3"></div>
+            <div class="light-ray ray-4"></div>
+            <div class="light-ray ray-5"></div>
+        </div>
+        <!-- Floating Bubbles (50 bubbles with different sizes and positions) -->
+         <div class="bubbles-container">
+             <!-- Small Bubbles -->
+            <div class="bubble small" style="left: 5%; animation-delay: 0s;"></div>
+            <div class="bubble small" style="left: 12%; animation-delay: 0.5s;"></div>
+            <div class="bubble small" style="left: 18%; animation-delay: 1s;"></div>
+            <div class="bubble small" style="left: 25%; animation-delay: 1.5s;"></div>
+            <div class="bubble small" style="left: 33%; animation-delay: 2s;"></div>
+            <div class="bubble small" style="left: 40%; animation-delay: 2.5s;"></div>
+            <div class="bubble small" style="left: 48%; animation-delay: 3s;"></div>
+            <div class="bubble small" style="left: 55%; animation-delay: 3.5s;"></div>
+            <div class="bubble small" style="left: 62%; animation-delay: 4s;"></div>
+            <div class="bubble small" style="left: 70%; animation-delay: 4.5s;"></div>
+            <div class="bubble small" style="left: 77%; animation-delay: 5s;"></div>
+            <div class="bubble small" style="left: 84%; animation-delay: 5.5s;"></div>
+            <div class="bubble small" style="left: 91%; animation-delay: 6s;"></div>
+            <div class="bubble small" style="left: 8%; animation-delay: 6.5s;"></div>
+            <div class="bubble small" style="left: 15%; animation-delay: 7s;"></div>
+    <!-- Medium Bubbles -->
+            <div class="bubble medium" style="left: 7%; animation-delay: 0.2s;"></div>
+            <div class="bubble medium" style="left: 14%; animation-delay: 0.8s;"></div>
+            <div class="bubble medium" style="left: 22%; animation-delay: 1.4s;"></div>
+            <div class="bubble medium" style="left: 30%; animation-delay: 2.1s;"></div>
+            <div class="bubble medium" style="left: 38%; animation-delay: 2.8s;"></div>
+            <div class="bubble medium" style="left: 45%; animation-delay: 3.4s;"></div>
+            <div class="bubble medium" style="left: 53%; animation-delay: 4.1s;"></div>
+            <div class="bubble medium" style="left: 60%; animation-delay: 4.8s;"></div>
+            <div class="bubble medium" style="left: 68%; animation-delay: 5.5s;"></div>
+            <div class="bubble medium" style="left: 75%; animation-delay: 6.2s;"></div>
+            <div class="bubble medium" style="left: 82%; animation-delay: 6.8s;"></div>
+            <div class="bubble medium" style="left: 89%; animation-delay: 7.5s;"></div>
+            <div class="bubble medium" style="left: 95%; animation-delay: 8s;"></div>
+            <div class="bubble medium" style="left: 10%; animation-delay: 8.5s;"></div>
+            <div class="bubble medium" style="left: 17%; animation-delay: 9s;"></div>
+            <div class="bubble medium" style="left: 24%; animation-delay: 9.5s;"></div>
+            <div class="bubble medium" style="left: 31%; animation-delay: 10s;"></div>
+            <div class="bubble medium" style="left: 39%; animation-delay: 10.5s;"></div>
+            <div class="bubble medium" style="left: 46%; animation-delay: 11s;"></div>
+            <div class="bubble medium" style="left: 54%; animation-delay: 11.5s;"></div>
+
+            <!-- Large Bubbles -->
+            <div class="bubble large" style="left: 9%; animation-delay: 0.3s;"></div>
+            <div class="bubble large" style="left: 19%; animation-delay: 1.2s;"></div>
+            <div class="bubble large" style="left: 28%; animation-delay: 2.3s;"></div>
+            <div class="bubble large" style="left: 37%; animation-delay: 3.5s;"></div>
+            <div class="bubble large" style="left: 47%; animation-delay: 4.7s;"></div>
+            <div class="bubble large" style="left: 56%; animation-delay: 5.9s;"></div>
+            <div class="bubble large" style="left: 65%; animation-delay: 7.1s;"></div>
+            <div class="bubble large" style="left: 74%; animation-delay: 8.3s;"></div>
+            <div class="bubble large" style="left: 83%; animation-delay: 9.5s;"></div>
+            <div class="bubble large" style="left: 92%; animation-delay: 10.7s;"></div>
+            <div class="bubble large" style="left: 13%; animation-delay: 11.9s;"></div>
+            <div class="bubble large" style="left: 21%; animation-delay: 13s;"></div>
+            <div class="bubble large" style="left: 35%; animation-delay: 14s;"></div>
+            <div class="bubble large" style="left: 50%; animation-delay: 15s;"></div>
+            <div class="bubble large" style="left: 71%; animation-delay: 16s;"></div>
+        </div>
+        <!-- Small swimming fish -->
+        <div class=" small-fish-container">
+             <div class="small-fish fish-1"></div>
+            <div class="small-fish fish-2"></div>
+            <div class="small-fish fish-3"></div>
+            <div class="small-fish fish-4"></div>
+            <div class="small-fish fish-5"></div>
+            <div class="small-fish fish-6"></div>
+            <div class="small-fish fish-7"></div>
+            <div class="small-fish fish-8"></div>
+        </div>
+    
+
+        <!-- Week 9 -->
+<div class="parchment-letter">
+     <h1>Week 9</h1>
+    <!-- Blocks Container -->
+    <div class="blocks-container">
+        <div class="block">
+            <h2>SKETCHS</h2>
+            <div class="image-placeholder">
+                <img src="image/catsketch.jpg" alt="IDEA SKETCHS">
+            </div>
+        </div>
+        <div class="block clickable">
+            <h2>RESEARCH</h2>
+            <a href="catresearch.html">
+            <div class="image-placeholder">
+                <img src="image/familiar.jpg" alt="researchs of familiar robot">
+            </div>
+        </div>
+        </a>
+
+        <div class="block clickable">
+            <h2>MY TEST CAT</h2>
+            <a href="cat.html">
+            <div class="image-placeholder">
+                <img src="image/blackcat.gif" alt="TRIAL">
+            </div>
+        </div>
+        </a>
+        
+    </div>
+<!-- Reflection block -->
+        <div class="reflection-block">
+            <div class="reflection-text">
+                <p>
+For the final week I pitched Bad Cat project idea — a mischievous digital cat that lives on your screen, connected to a physical plushie via Arduino.
+
+The idea came from something very real: cats don’t do what you want. They sit on your laptop. They knock things off tables. They ignore you until they don’t. I wanted to make something with that same unpredictable, annoying energy. What I found most interesting in developing this concept was realising that unpredictability is the feature. A predictable interaction gets boring fast. An unpredictable one makes people stay and wait to see what happens next
+                </p>
+            </div>
+</div>
+
+      <div class="week-buttons">
+    <a href="week8.html">
+        <img src="image/backbutton.png" alt="previous" class="nav-btn">
+    </a>
+    <a href="index.html">
+        <img src="image/homebutton.png" alt="home" class="nav-btn">
+    </a>
+    <a href="designprocess.html">
+        <img src="image/nextbutton.png" alt="next" class="nav-btn">
+    </a>
+</div>
+    </div>
+</div>
+       
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>sienna / 2026 / interactive media</p>
+        </div>
+    </div>
+    
+</body>
+</html> 
