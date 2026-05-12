@@ -433,7 +433,7 @@ body.week-page .parchment-letter::before {
 .oyster {
     position: absolute;
     left: 900px;
-    top: 19%;
+    top: 12%;
     width: 105px;
     height: 63px;
     background: url("image/oyster.gif") no-repeat center;
