@@ -1261,7 +1261,7 @@ code {
 @media (max-width: 768px) {
     
     body.week-page .parchment-letter {
-        width: 95%;
+        width: 45%;
         padding: 20px;
         margin: 20px auto;
     }
@@ -1283,11 +1283,6 @@ code {
     .nav-btn {
         width: 80px;
         height: 80px;
-    }
-
-    .small-fish-container,
-    .mythical-creatures {
-        display: none;
     }
 
     .welcome-txt {
